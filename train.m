@@ -3,7 +3,7 @@ clear;
 close all;
 
 %% LOAD DATASET
-datasetPath = 'C:\Users\Vaishnavi Kamat\OneDrive\Desktop\plant_disease\dataset';
+datasetPath = 'dataset';
 
 imds = imageDatastore(datasetPath, ...
     'IncludeSubfolders', true, ...
@@ -66,6 +66,6 @@ accuracy = mean(predLabels == testDS.Labels);
 fprintf('Accuracy = %.2f%%\n', accuracy * 100);
 
 %% SAVE MODEL
-save('C:\Users\Vaishnavi Kamat\OneDrive\Desktop\plant_disease\plant_model.mat', 'trainedNet');
+save('plant_model.mat', 'trainedNet');
 
 disp('MobileNetV2 model trained successfully!');
