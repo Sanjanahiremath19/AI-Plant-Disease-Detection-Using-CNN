@@ -1,5 +1,5 @@
 clc; clear; close all;
-load('C:\Users\Vaishnavi Kamat\OneDrive\Desktop\plant_disease\plant_model.mat', 'trainedNet');
+load('plant_model.mat', 'trainedNet');
 net = trainedNet;
 
 [filename, pathname] = uigetfile({'*.jpg;*.png'}, 'Select Leaf Image');
